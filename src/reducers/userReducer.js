@@ -1,4 +1,4 @@
-import * as types from "../../../front/src/actions/types";
+import * as types from "../actions/types";
 import { seconduser } from './../actions/seconduser';
 
 const userReducer = (state = { user: {} }, action) => {

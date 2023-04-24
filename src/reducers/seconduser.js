@@ -1,4 +1,4 @@
-import * as types from "../../../front/src/actions/types";
+import * as types from "../actions/types";
 
 const secondUserReducer = (state = { friend: {} }, action) => {
   switch (action.type) {
