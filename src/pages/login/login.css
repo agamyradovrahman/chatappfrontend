@@ -1,0 +1,101 @@
+.login {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(32 5 5 / 50%), rgba(72 72 72 / 50%));
+  background-size: cover;
+}
+
+.secondcont {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 11px rgb(207, 207, 207);
+}
+
+.loginTitle {
+  font-size: 50px;
+}
+
+.loginForm {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.loginForm > label {
+  margin: 10px 0;
+}
+
+.loginInput {
+  padding: 15px;
+  font-size: 18px;
+  background-color: rgb(238, 229, 229);
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.loginInputt {
+  width: 93%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: rgb(238, 229, 229);
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.logineye {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(238, 229, 229);
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.eyeicon {
+    padding-right: 7px;
+}
+
+.loginButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.loginRegisterButton {
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: blue;
+}
+
+.labelstyle {
+  font-size: 25px;
+}
+
+
+.errstyle {
+    padding: 5px;
+    font-size: 20px;
+    color: red;
+}

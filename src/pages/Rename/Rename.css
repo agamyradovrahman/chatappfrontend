@@ -1,0 +1,39 @@
+.cont {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.continput {
+    display: flex;
+    width: 80%;
+    padding: 8px;
+    font-size: 15px;
+    background-color: transparent; 
+    border: none;
+    outline: none;
+    color: white;
+}
+.Plus {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.Plusstyle {
+    font-size: 23px;
+    padding: 6px;
+    color: white;
+}
+
+.friendstyle {
+    display: flex;
+    font-size: 17px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 7px;
+}

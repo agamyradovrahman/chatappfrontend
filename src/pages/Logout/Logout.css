@@ -1,0 +1,200 @@
+.logoutcont {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: -2px;
+}
+
+.logoutcontrue{
+  left: 0;
+  top: 0;
+  width: 28%;
+  height: 100%;
+  background-color: #23272A;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.profileheadstyle {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.profiletext {
+  color: white;
+  font-size: 22px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding-left: 15px;
+}
+
+
+.usercont {
+  display: flex;
+  flex: 1;
+  width: 22%;
+  background-color: #1e2124;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: -2px;
+}
+
+.usernamecont {
+  font-size: 22px;
+  color:white;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.logoutsign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 22px;
+  background-color: #bdcacf;
+  padding: 9px;
+}
+
+.logoutsure {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 95%;
+  width: 95%;
+  background-color: #23272A;
+}
+
+.logoutsurestyle {
+  display: flex;
+  background-color: #2C2F33;
+  height: 200px;
+  width: 350px;
+  flex-direction: column;
+  color: white;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoutbaslyk {
+  padding: 20px;
+  font-size: 24px;
+}
+
+.logouticons {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.logoutyes {
+  background: green;
+  margin: 10px;
+}
+
+.logoutno {
+  background: red;
+  margin: 10px;
+}
+
+.logoutyazy {
+  padding: 15px;
+  color: white;
+}
+
+.profilestyle{
+  padding: 2px;
+  margin-left: 16px;
+}
+
+.profilestyleimage{
+  height: 45px;
+  width: 45px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.backsignstyle {
+  color: white;
+  font-size: 26px;
+  padding: 7px;
+}
+
+.avatarstyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  
+
+}
+
+.avatarimagestyle {
+
+  height: 200px;
+  width: 200px;
+}
+
+.edityourphotostyle {
+  padding-top: 15px;
+  color: rgb(112, 112, 194);
+  display: flex;
+  flex-direction: row;
+}
+
+.avatarimage {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.addfriendstyle {
+  padding: 5px;
+  padding-left: 15px;
+}
+
+.addfriendtext{
+  padding-left: 15px;
+  color: white;
+  font-size: 20px;
+  padding-top: 35px;
+}
+
+.logoutt {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  
+}
+
+.logoutttext {
+  color: black;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+}
+
