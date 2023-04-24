@@ -26,17 +26,15 @@ function App() {
 
 
   return (
-    <div>
-      asfdasfhnsajfhnassdadsadasdasdsad
-    </div>
-  /*  <BrowserRouter >
+    
+    <BrowserRouter >
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={ <Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
       </Routes>
-    </BrowserRouter>*/
+    </BrowserRouter>
   );
 }
 
