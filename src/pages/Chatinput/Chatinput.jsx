@@ -15,7 +15,7 @@ const Chatinput = ({ too, socket }) => {
     console.log(too);
     try {
       const data = await axios.post(
-        "http://localhost:5000/api/msg/addmsgs/",
+        "https://chatapp-backend-rvtt.onrender.com/api/msg/addmsgs/",
         {
           from,
           too,

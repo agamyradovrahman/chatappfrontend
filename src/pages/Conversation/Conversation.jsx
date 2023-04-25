@@ -18,7 +18,7 @@ export default function Conversation({ con, user, friend }) {
     const getUser = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/auth/getsingleuser/${seconduserid}`
+          `https://chatapp-backend-rvtt.onrender.com/api/auth/getsingleuser/${seconduserid}`
         );
         setUserr(res.data.user);
 
@@ -35,7 +35,7 @@ export default function Conversation({ con, user, friend }) {
     try {
       console.log(useridd);
       console.log(seconduserid);
-      const res = await axios.post(`http://localhost:5000/api/cons/delcon`, {
+      const res = await axios.post(`https://chatapp-backend-rvtt.onrender.com/api/cons/delcon`, {
         user1: useridd,
         user2: seconduserid,
       });

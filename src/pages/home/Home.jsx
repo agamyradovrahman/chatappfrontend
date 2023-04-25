@@ -41,7 +41,7 @@ function Home() {
 
   useEffect(() => {
     if (user) {
-      socket.current = io("http://localhost:5000");
+      socket.current = io("https://chatapp-backend-rvtt.onrender.com");
       socket.current.emit("add-user", user._id);
     }
   }, [user]);
@@ -101,7 +101,7 @@ function Home() {
     try {
       console.log(useridd);
       console.log(friendid);
-      const res = await axios.post(`http://localhost:5000/api/cons/delcon`, {
+      const res = await axios.post(`https://chatapp-backend-rvtt.onrender.com/api/cons/delcon`, {
         user1: useridd,
         user2: friendid,
       });

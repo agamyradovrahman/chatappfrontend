@@ -19,7 +19,7 @@ export default function Register() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/register/",
+        "https://chatapp-backend-rvtt.onrender.com/api/auth/register/",
         {
           username,
           email,

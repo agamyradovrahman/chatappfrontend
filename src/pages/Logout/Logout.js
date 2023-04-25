@@ -93,7 +93,7 @@ const Logout = ({ showw }) => {
       formData.append("image", image);
 
       const res = await axios.post(
-        `http://localhost:5000/api/upload/img`,
+        `https://chatapp-backend-rvtt.onrender.com/api/upload/img`,
         formData
       );
 
@@ -103,7 +103,7 @@ const Logout = ({ showw }) => {
       console.log(res.data.url);
 
       const red = await axios.put(
-        `http://localhost:5000/api/auth/user/uploadavatar`,
+        `https://chatapp-backend-rvtt.onrender.com/api/auth/user/uploadavatar`,
         { userid, url: urll }
       );
 

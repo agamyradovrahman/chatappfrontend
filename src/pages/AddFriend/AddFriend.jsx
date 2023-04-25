@@ -19,7 +19,7 @@ const AddFriend = () => {
     e.preventDefault();
     try {
       const data = await axios.post(
-        "http://localhost:5000/api/cons/addcon/",
+        "https://chatapp-backend-rvtt.onrender.com/api/cons/addcon/",
         {
           user1,
           user2, 
@@ -33,7 +33,7 @@ const AddFriend = () => {
       console.log(data)
 
       if (data.data.status=== true) {
-        const res = await axios.get(`http://localhost:5000/api/auth/singleuser/${user2}`)
+        const res = await axios.get(`https://chatapp-backend-rvtt.onrender.com/api/auth/singleuser/${user2}`)
 
         dispatch(AddCon({ user1, user2: res.data.user._id}));
         setUser2("");

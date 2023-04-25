@@ -20,7 +20,7 @@ const Rename = () => {
     e.preventDefault();
     try {
         const data = await axios.put(
-            "http://localhost:5000/api/auth/user/rename",
+            "https://chatapp-backend-rvtt.onrender.com/api/auth/user/rename",
             {
               userid: user1,
               newusername: user, 
