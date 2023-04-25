@@ -6,7 +6,7 @@ export const fetchPosts = (userid, friendid) => async (dispatch) =>{
  
     try {
         
-        const data = await axios.get(`http://localhost:5000/api/cons/${friendid}/`)
+        const data = await axios.get(`https://chatapp-backend-rvtt.onrender.com/api/cons/${friendid}/`)
         
  
         dispatch({

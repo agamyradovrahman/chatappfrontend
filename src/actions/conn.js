@@ -3,7 +3,7 @@ import * as types from "./types";
 
 export const  cons =  (userId) => async (dispatch) => {
     try {
-        const data = await axios.get(`http://localhost:5000/api/cons/${userId}`)
+        const data = await axios.get(`https://chatapp-backend-rvtt.onrender.com/api/cons/${userId}`)
         
 
         dispatch({

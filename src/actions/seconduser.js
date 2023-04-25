@@ -4,7 +4,7 @@ import axios  from 'axios';
 export const seconduser = (friendid) => async (dispatch) => {
   try {
     const res = await axios.get(
-      `http://localhost:5000/api/auth/getsingleuser/${friendid}`
+      `https://chatapp-backend-rvtt.onrender.com/api/auth/getsingleuser/${friendid}`
     );
 
     dispatch({
