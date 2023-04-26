@@ -98,7 +98,7 @@ const Logout = ({ showw }) => {
       );
 
       const urll = res.data.url;
-      console.log(userid);
+      console.log(res);
 
       console.log(res.data.url);
 
