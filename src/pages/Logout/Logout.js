@@ -155,19 +155,19 @@ const Logout = ({ showw }) => {
             <div className="edityourphotostyle">
               <div style={{display: "flex", flex:1, paddingRight: 20}} onClick={handleClick1}>
                 <div>Choose File</div>
-                <input
+              </div>
+              <input
                   type="file"
                   ref={hiddenFileInput}
                   onChange={(e) => setImage(e.target.files[0])}
                   style={{display: 'none'}}
                 />
-              </div>
 
               <div ref={hiddenFileInput1} style={{display: 'none'}} onClick={(e) => handleClick2(e)}>Upload</div>
             </div>
           </div>
           <div className="addfriendstyle">
-            <div className="addfriendtext">Add Friend</div>
+            <div className="addfriendtext">Add Friend</div> 
             <AddFriend />
           </div>
           <div className="addfriendstyle">
