@@ -53,7 +53,7 @@ function Home() {
         
       });
     }
-  }, [dispatch, dosuser._id, useridd]);
+  }, []);
 
   const onChange = (con) => {
     setFrien(con);
