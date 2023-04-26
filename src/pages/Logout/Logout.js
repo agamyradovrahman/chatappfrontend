@@ -119,7 +119,6 @@ const Logout = ({ showw }) => {
 
   const handleClick1 = async () => {
     await hiddenFileInput.current.click();
-    await hiddenFileInput1.current.click();
   };
 
   return (
@@ -163,7 +162,7 @@ const Logout = ({ showw }) => {
                   style={{display: 'none'}}
                 />
 
-              <div ref={hiddenFileInput1} style={{display: 'none'}} onClick={(e) => handleClick2(e)}>Upload</div>
+              <div ref={hiddenFileInput1}  onClick={(e) => handleClick2(e)}>Upload</div>
             </div>
           </div>
           <div className="addfriendstyle">
