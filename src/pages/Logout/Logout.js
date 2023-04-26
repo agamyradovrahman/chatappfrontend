@@ -50,7 +50,7 @@ const Logout = ({ showw }) => {
 
   const yesClick = async () => {
     try {
-      const data = await axios.get(`http://localhost:5000/api/auth/logout/`, {
+      const data = await axios.get(`https://chatapp-backend-rvtt.onrender.com/api/auth/logout/`, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });
