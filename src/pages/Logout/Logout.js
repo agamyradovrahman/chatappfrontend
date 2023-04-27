@@ -87,9 +87,19 @@ const Logout = ({ showw }) => {
     }
   }, [showw]);
 
+
+  
+
+  const handleClick1 = async () => {
+    await hiddenFileInput.current.click();
+    console.log(image)
+  };
+
+
   const handleClick2 = async () => {
     try {
-      const formData = new FormData();
+      console.log("sss")
+  /*    const formData = new FormData();
       formData.append("image", image);
 
       const res = await axios.post(
@@ -111,16 +121,12 @@ const Logout = ({ showw }) => {
 
       if (red.data.status) {
         dispatch(Renameuser(red.data.user));
-      }
+      } */
     } catch (error) {
       console.log(error);
     }
   }; 
 
-  const handleClick1 = async () => {
-    await hiddenFileInput.current.click();
-    console.log(image)
-  };
 
   return (
     <>
