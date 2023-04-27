@@ -163,7 +163,7 @@ const Logout = ({ showw }) => {
                   style={{display: 'none'}}
                 />
 
-              <div ref={hiddenFileInput1}  onClick={handleClick2()}>Upload</div>
+              <div ref={hiddenFileInput1}  onClick={handleClick2}>Upload</div>
             </div>
           </div>
           <div className="addfriendstyle">
