@@ -115,10 +115,11 @@ const Logout = ({ showw }) => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }; 
 
   const handleClick1 = async () => {
     await hiddenFileInput.current.click();
+    console.log(image)
   };
 
   return (
