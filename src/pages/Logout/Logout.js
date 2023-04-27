@@ -87,7 +87,7 @@ const Logout = ({ showw }) => {
     }
   }, [showw]);
 
-  const handleClick2 = async (e) => {
+  const handleClick2 = async () => {
     try {
       const formData = new FormData();
       formData.append("image", image);
@@ -163,7 +163,7 @@ const Logout = ({ showw }) => {
                   style={{display: 'none'}}
                 />
 
-              <div ref={hiddenFileInput1}  onClick={(e) => handleClick2(e)}>Upload</div>
+              <div ref={hiddenFileInput1}  onClick={handleClick2()}>Upload</div>
             </div>
           </div>
           <div className="addfriendstyle">
