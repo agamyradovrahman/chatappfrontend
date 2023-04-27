@@ -98,10 +98,11 @@ const Logout = ({ showw }) => {
 
   const handleClick2 = async () => {
     try {
-      console.log("sss")
-  /*    const formData = new FormData();
+      
+      const formData = new FormData();
       formData.append("image", image);
-
+      console.log(formData)
+ /*
       const res = await axios.post(
         `https://chatapp-backend-rvtt.onrender.com/api/upload/img`,
         formData
