@@ -111,12 +111,13 @@ const Logout = ({ showw }) => {
       const urll = res.data.url;
       console.log(res); 
 
-      /*
-
+      
+      
       console.log(res.data.url);
 
+      /*
       const red = await axios.put(
-        `https://chatapp-backend-rvtt.onrender.com/api/auth/user/uploadavatar`,
+        `http://localhost:5000/api/auth/user/uploadavatar`,
         { userid, url: urll }
       );
 
@@ -124,7 +125,7 @@ const Logout = ({ showw }) => {
 
       if (red.data.status) {
         dispatch(Renameuser(red.data.user));
-      } */
+      }  */
     } catch (error) {
       console.log(error);
     }
