@@ -21,6 +21,7 @@ const Logout = ({ showw }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.user.user);
+  const token = useSelector((state) => state.user.token);
   const avatar = useSelector((state) => state.user.user.avatar);
 
   const userid = user._id;
@@ -108,8 +109,8 @@ const Logout = ({ showw }) => {
         url: "https://chatapp-backend-rvtt.onrender.com/api/upload/img",
         method: "POST",
         headers: {
-          "Accept": "multipart/form-data",
-          "Content-Type": "multipart/form-data"
+          "Content-Type": "multipart/form-data",
+          'Authorization': token,
         },
         data: formData, 
       }) 
