@@ -102,10 +102,15 @@ const Logout = ({ showw }) => {
       const formData = new FormData();
       formData.append("image", image);
       console.log(formData)
+
+      const res = await axios({
+        // Endpoint to send files
+        url: "https://chatapp-backend-rvtt.onrender.com/api/upload/img",
+        method: "POST",
+        
+        data: formData,
+      }) 
  
-      const res = await axios.post(
-        `https://chatapp-backend-rvtt.onrender.com/api/upload/img`,
-        formData);
 
       const urll = res.data.url;
       console.log(res); 
