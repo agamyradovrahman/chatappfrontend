@@ -107,7 +107,9 @@ const Logout = ({ showw }) => {
         // Endpoint to send files
         url: "https://chatapp-backend-rvtt.onrender.com/api/upload/img",
         method: "POST",
-        
+        headers: {
+          "Accept": "multipart/form-data",
+        },
         data: formData,
       }) 
  
