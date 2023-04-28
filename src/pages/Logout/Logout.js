@@ -105,7 +105,11 @@ const Logout = ({ showw }) => {
  
       const res = await axios.post(
         `https://chatapp-backend-rvtt.onrender.com/api/upload/img`,
-        formData
+        formData,
+        {
+          header: {"Content-Type": "multipart/form-data"},
+          withCredentials: true
+        }
       );
 
       const urll = res.data.url;
