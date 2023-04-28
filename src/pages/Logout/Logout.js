@@ -109,8 +109,9 @@ const Logout = ({ showw }) => {
         method: "POST",
         headers: {
           "Accept": "multipart/form-data",
+          "Content-Type": "multipart/form-data"
         },
-        data: formData,
+        data: formData, 
       }) 
  
 
