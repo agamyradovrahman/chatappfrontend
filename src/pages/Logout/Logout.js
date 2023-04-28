@@ -107,7 +107,7 @@ const Logout = ({ showw }) => {
         `https://chatapp-backend-rvtt.onrender.com/api/upload/img`,
         formData,
         {
-          header: {"Content-Type": "multipart/form-data"},
+          headers: {"Content-Type": "multipart/form-data"},
           withCredentials: true
         }
       );
