@@ -110,7 +110,6 @@ const Logout = ({ showw }) => {
         method: "POST",
         headers: {
           "Content-Type": "multipart/form-data",
-          'Authorization': token,
         },
         data: formData, 
       }) 
