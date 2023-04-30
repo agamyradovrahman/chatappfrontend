@@ -14,6 +14,12 @@ export default function Register() {
 
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    if (localStorage.getItem("chatapp")) {
+      navigate("/home");
+    }
+  }, []);
+
   const handleSubmit = async (e) => {
     setPrr()
     e.preventDefault();

@@ -20,6 +20,14 @@ export default function Login() {
   const [icon, setIcon] = useState(eyeOff);
   const [err, setErr] = useState("");
 
+
+  useEffect(() => {
+    if (localStorage.getItem("chatapp")) {
+      navigate("/home");
+    }
+  }, []);
+
+
   const handleClick = async (e) => {
     e.preventDefault();
     const { data } = await axios.post(
@@ -40,7 +48,11 @@ export default function Login() {
     console.log(data);
 
     if (data.status === true) {
-      dispatch(LoginUser(data));
+      localStorage.setItem(
+        "chatapp",
+        JSON.stringify(data.user)
+      );
+      dispatch(LoginUser(data)); 
       setPassword("");
       setUsername("");
 
@@ -49,6 +61,8 @@ export default function Login() {
       setErr(data.msg);
     }
   };
+
+
 
   const handleToggle = () => {
     if (passeye === "password") {
