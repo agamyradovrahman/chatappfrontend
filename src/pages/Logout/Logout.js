@@ -204,7 +204,7 @@ const Logout = ({ showw }) => {
             <div className="profilestyle" onClick={() => profileClick()}>
               <img className="profilestyleimage" src={avatar} alt="" />
             </div>
-            <div className="usernamecont">{user.username}</div>
+            <div className="usernamecont">{user?.username}</div>
           </div>
         </div>
       )}

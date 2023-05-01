@@ -51,7 +51,7 @@ export default function Login() {
     if (data.status === true) {
       localStorage.setItem(
         "chatapp",
-        JSON.stringify(data)
+        data
       );
       dispatch(LoginUser(data)); 
       setPassword("");
