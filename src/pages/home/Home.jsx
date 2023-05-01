@@ -25,10 +25,10 @@ function Home() {
   const [friendid, setFriendid] = useState("");
   const postlar = useSelector((state) => state.posts?.posts);
 
-  const user = useSelector((state) => state.user.user);
-  const conslar = useSelector((state) => state.con.posts);
+  const user = useSelector((state) => state.user?.user);
+  const conslar = useSelector((state) => state.con?.posts);
 
-  const dosuser = useSelector((state) => state.seconduser.friend);
+  const dosuser = useSelector((state) => state.seconduser?.friend);
 
   const useridd = useSelector((state) => state.user?.user?._id);
 
@@ -45,13 +45,13 @@ function Home() {
   console.log(useridd);
 
   useEffect(() => {
-    dispatch(cons(user._id));
+    dispatch(cons(user?._id));
   }, [dispatch, user?._id]);
 
   useEffect(() => {
     if (user) {
       socket.current = io("https://chatapp-backend-rvtt.onrender.com");
-      socket.current.emit("add-user", user._id);
+      socket.current.emit("add-user", user?._id);
     }
   }, [user]);
 
