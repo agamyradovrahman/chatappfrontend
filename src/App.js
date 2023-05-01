@@ -7,10 +7,12 @@ function App() {
 
 
 
-/*  const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchPosts());
-  }, [dispatch]); */
+    if (localStorage.getItem("chatapp")) {
+      console.log(localStorage.getItem("chatapp"))
+    }
+  }, []);
+
  
 
 
