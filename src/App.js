@@ -29,7 +29,6 @@ function App() {
 
   useEffect(() => {
     if (localStorage.getItem("chatapp")) {
-      navigate("/home");
       console.log(localStorage.getItem("chatapp"))
     }
   }, []);
