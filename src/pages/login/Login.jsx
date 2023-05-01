@@ -24,6 +24,7 @@ export default function Login() {
   useEffect(() => {
     if (localStorage.getItem("chatapp")) {
       dispatch(LoginUser(localStorage.getItem("chatapp")))
+      console.log(localStorage.getItem("chatapp"))
       navigate("/home");
     }
   }, []); 
@@ -51,7 +52,7 @@ export default function Login() {
     if (data.status === true) {
       localStorage.setItem(
         "chatapp",
-        data
+        JSON.stringify(data)
       );
       dispatch(LoginUser(data)); 
       setPassword("");
