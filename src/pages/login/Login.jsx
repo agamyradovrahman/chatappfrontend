@@ -24,8 +24,9 @@ export default function Login() {
   useEffect(() => {
     if (localStorage.getItem("chatapp")) {
       dispatch(LoginUser(localStorage.getItem("chatapp")))
-      console.log(localStorage.getItem("chatapp"))
-      navigate("/home");
+      if (user) {
+        navigate("/home")
+      }
     }
   }, []); 
 
