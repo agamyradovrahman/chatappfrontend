@@ -6,16 +6,6 @@ import Login from "./pages/login/Login";
 function App() {
 
 
-
-  useEffect(() => {
-    if (localStorage.getItem("chatapp")) {
-      console.log(localStorage.getItem("chatapp"))
-    }
-  }, []);
-
- 
-
-
   return (
     
     <BrowserRouter >
