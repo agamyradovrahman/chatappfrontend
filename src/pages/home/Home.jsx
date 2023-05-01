@@ -13,7 +13,7 @@ import Logout from "./../Logout/Logout";
 import { useNavigate } from "react-router-dom";
 import { RiDeleteBinLine } from "react-icons/ri";
 import axios from "axios";
-import { LogoutSecondUser } from "../../actions/userauth";
+import { LoginUser, LogoutSecondUser } from "../../actions/userauth";
 
 function Home() {
   const [showw, setShoww] = useState(false);
@@ -38,11 +38,10 @@ function Home() {
   useEffect(() => {
     if (localStorage.getItem("chatapp")) {
       dispatch(LoginUser(localStorage.getItem("chatapp")))
-      navigate("/home");
     }
   }, []); 
 
-  
+
   console.log(useridd);
 
   useEffect(() => {
