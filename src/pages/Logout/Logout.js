@@ -22,7 +22,7 @@ const Logout = ({ showw }) => {
   const navigate = useNavigate();
   const user = useSelector((state) => state.user.user);
   const token = useSelector((state) => state.user.token);
-  const avatar = useSelector((state) => state.user.user.avatar);
+  const avatar = useSelector((state) => state.user.user?.avatar);
 
   const userid = user._id;
 
