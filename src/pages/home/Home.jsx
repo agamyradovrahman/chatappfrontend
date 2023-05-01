@@ -33,6 +33,16 @@ function Home() {
   const useridd = useSelector((state) => state.user?.user?._id);
 
   const dispatch = useDispatch();
+
+
+  useEffect(() => {
+    if (localStorage.getItem("chatapp")) {
+      dispatch(LoginUser(localStorage.getItem("chatapp")))
+      navigate("/home");
+    }
+  }, []); 
+
+  
   console.log(useridd);
 
   useEffect(() => {
