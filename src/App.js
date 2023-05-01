@@ -10,7 +10,6 @@ let token
 
 function App() {
 
-  const navigate = useNavigate()
 
 
 /*  const dispatch = useDispatch();
@@ -29,6 +28,7 @@ function App() {
 
   useEffect(() => {
     if (localStorage.getItem("chatapp")) {
+
       console.log(localStorage.getItem("chatapp"))
     }
   }, []);
