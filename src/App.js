@@ -10,6 +10,8 @@ let token
 
 function App() {
 
+  const navigate = useNavigate()
+
 
 /*  const dispatch = useDispatch();
   useEffect(() => {
@@ -23,6 +25,15 @@ function App() {
   } else {
      token = false
   }
+
+
+  useEffect(() => {
+    if (localStorage.getItem("chatapp")) {
+      navigate("/home");
+      console.log(localStorage.getItem("chatapp"))
+    }
+  }, []);
+
 
 
   return (

@@ -36,7 +36,7 @@ export default function Register() {
       );
       if (data.status === true) {
         
-        dispatch(RegisterUser(data));
+      
         setPassword("");
         setUsername("");
         setEmail("");
