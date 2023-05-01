@@ -24,7 +24,7 @@ const Logout = ({ showw }) => {
   const token = useSelector((state) => state.user.token);
   const avatar = useSelector((state) => state.user.user?.avatar);
 
-  const userid = user._id;
+  const userid = user?._id;
 
   const handleClick = async () => {
     try {
