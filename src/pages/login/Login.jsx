@@ -23,9 +23,10 @@ export default function Login() {
 
   useEffect(() => {
     if (localStorage.getItem("chatapp")) {
+      dispatch(LoginUser(localStorage.getItem("chatapp")))
       navigate("/home");
     }
-  }, []);
+  }, []); 
 
 
   const handleClick = async (e) => {
@@ -50,7 +51,7 @@ export default function Login() {
     if (data.status === true) {
       localStorage.setItem(
         "chatapp",
-        JSON.stringify(data.user)
+        JSON.stringify(data)
       );
       dispatch(LoginUser(data)); 
       setPassword("");
