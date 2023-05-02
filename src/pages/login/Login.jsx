@@ -33,6 +33,17 @@ export default function Login() {
     } 
   }, []); */
 
+  const dataaa = async () => {
+    await JSON.parse(localStorage.getItem("chatapp"));
+  };
+
+  if (dataaa) {
+    dispatch(LoginUser(dataaa));
+    navigate("/home")
+  } else {
+    console.log("user is not exist");
+  }
+
   useEffect(() => {
     if (localStorage.getItem("chatapp")) {
       navigate("/home");

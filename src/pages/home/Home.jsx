@@ -34,15 +34,6 @@ function Home() {
 
   const dispatch = useDispatch();
 
-  const dataaa = async () => {
-    await JSON.parse(localStorage.getItem("chatapp"));
-  };
-
-  if (dataaa) {
-    dispatch(LoginUser(dataaa));
-  } else {
-    console.log("user is not exist");
-  }
 
   console.log(useridd);
 
