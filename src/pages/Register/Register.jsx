@@ -17,8 +17,9 @@ export default function Register() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    const navigat = useNavigate();
     if (localStorage.getItem("chatapp")) {
-      navigate("/home");
+      navigat("/home");
     }
   }, []);
 
