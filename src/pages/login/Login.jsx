@@ -20,8 +20,7 @@ export default function Login() {
   const [icon, setIcon] = useState(eyeOff);
   const [err, setErr] = useState("");
 
-
-/*  useEffect(async () => {
+  /*  useEffect(async () => {
     const dataaa = await JSON.parse(
       localStorage.getItem("chatapp")
     );
@@ -33,22 +32,16 @@ export default function Login() {
     } 
   }, []); */
 
+  useEffect(async () => {
+    const dataaa = await JSON.parse(localStorage.getItem("chatapp"));
 
-  useEffect( async () => {
-    const dataaa = await JSON.parse(
-      localStorage.getItem("chatapp")
-    );
-
-    if(dataaa){
-      dispatch(LoginUser(dataaa))
+    if (dataaa.status) {
+      dispatch(LoginUser(dataaa));
+      navigate("/home");
     } else {
       console.log("user is not exist");
-    } 
-    if (localStorage.getItem("chatapp")) {
-      navigate("/home");
     }
   }, []);
-
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -67,11 +60,8 @@ export default function Login() {
     console.log(data);
 
     if (data.status === true) {
-      localStorage.setItem(
-        "chatapp",
-        JSON.stringify(data)
-      );
-      dispatch(LoginUser(data)); 
+      localStorage.setItem("chatapp", JSON.stringify(data));
+      dispatch(LoginUser(data));
       setPassword("");
       setUsername("");
 
@@ -80,8 +70,6 @@ export default function Login() {
       setErr(data.msg);
     }
   };
-
-
 
   const handleToggle = () => {
     if (passeye === "password") {
