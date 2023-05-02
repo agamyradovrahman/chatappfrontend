@@ -28,7 +28,7 @@ export default function Login() {
 
     if(dataaa){
       console.log(dataaa)
-      dispatch(LoginUser(dataa))
+      dispatch(LoginUser(dataaa))
     }
   }, []);
 
