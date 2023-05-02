@@ -35,13 +35,6 @@ function Home() {
   const dispatch = useDispatch();
 
 
-  useEffect(() => {
-    if (localStorage.getItem("chatapp")) {
-      dispatch(LoginUser(localStorage.getItem("chatapp")))
-    }
-  }, []); 
-
-
   console.log(useridd);
 
   useEffect(() => {

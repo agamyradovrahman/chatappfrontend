@@ -21,14 +21,17 @@ export default function Login() {
   const [err, setErr] = useState("");
 
 
-  useEffect(() => {
-    if (localStorage.getItem("chatapp")) {
-      dispatch(LoginUser(localStorage.getItem("chatapp")))
-      if (user) {
-        navigate("/home")
-      }
+  useEffect(async () => {
+    const dataaa = await JSON.parse(
+      localStorage.getItem("chatapp")
+    );
+
+    if(dataaa){
+      console.log(dataaa)
+      dispatch(LoginUser(dataa))
     }
-  }, []); 
+  }, []);
+
 
 
   const handleClick = async (e) => {
