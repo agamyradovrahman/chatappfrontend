@@ -29,7 +29,6 @@ export default function Login() {
     if(dataaa){
       console.log(dataaa)
       dispatch(LoginUser(dataaa))
-      navigate("/home");
     }
   }, []);
 
