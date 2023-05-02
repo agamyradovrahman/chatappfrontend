@@ -27,14 +27,17 @@ export default function Login() {
     );
 
     if(dataaa){
-      console.log(dataaa)
       dispatch(LoginUser(dataaa))
-      navigate("/home");
     } else {
       console.log("user is not exist");
-    }
+    } 
   }, []);
 
+  useEffect(() => {
+    if (localStorage.getItem("chatapp")) {
+      navigate("/home");
+    }
+  }, []);
 
 
   const handleClick = async (e) => {
@@ -50,9 +53,6 @@ export default function Login() {
         withCredentials: true,
       }
     );
-    
-    console.log(username);
-    console.log(password);
 
     console.log(data);
 
