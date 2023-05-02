@@ -30,6 +30,8 @@ export default function Login() {
       console.log(dataaa)
       dispatch(LoginUser(dataaa))
       navigate("/home");
+    } else {
+      console.log("user is not exist");
     }
   }, []);
 
@@ -80,14 +82,6 @@ export default function Login() {
       setIcon(eyeOff);
     }
   };
-
-  useEffect(() => {
-    if (user) {
-      navigate("/home");
-    } else {
-      console.log("user is not exist");
-    }
-  }, [user, navigate]);
 
   return (
     <div className="login">
