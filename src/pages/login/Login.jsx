@@ -37,7 +37,6 @@ export default function Login() {
 
     if (dataaa.status) {
       dispatch(LoginUser(dataaa));
-      navigate("/home");
     } else {
       console.log("user is not exist");
     }
