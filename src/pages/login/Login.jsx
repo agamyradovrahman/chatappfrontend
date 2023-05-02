@@ -21,7 +21,7 @@ export default function Login() {
   const [err, setErr] = useState("");
 
 
-  useEffect(async () => {
+/*  useEffect(async () => {
     const dataaa = await JSON.parse(
       localStorage.getItem("chatapp")
     );
@@ -30,7 +30,7 @@ export default function Login() {
       console.log(dataaa)
       dispatch(LoginUser(dataaa))
     }
-  }, []);
+  }, []); */
 
 
 
