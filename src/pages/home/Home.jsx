@@ -34,19 +34,15 @@ function Home() {
 
   const dispatch = useDispatch();
 
+  const dataaa = async () => {
+    await JSON.parse(localStorage.getItem("chatapp"));
+  };
 
-  useEffect(async () => {
-    const dataaa = await JSON.parse(
-      localStorage.getItem("chatapp")
-    );
-
-    if(dataaa){
-      dispatch(LoginUser(dataaa))
-    } else {
-      console.log("user is not exist");
-    } 
-  }, []);
-  
+  if (dataaa) {
+    dispatch(LoginUser(dataaa));
+  } else {
+    console.log("user is not exist");
+  }
 
   console.log(useridd);
 
@@ -65,7 +61,6 @@ function Home() {
     if (socket.current) {
       socket.current.on("msg-recieve", (msg) => {
         dispatch(AddPost({ from: dosuser._id, too: useridd, message: msg }));
-        
       });
     }
   }, []);
@@ -116,15 +111,18 @@ function Home() {
     try {
       console.log(useridd);
       console.log(friendid);
-      const res = await axios.post(`https://chatapp-backend-rvtt.onrender.com/api/cons/delcon`, {
-        user1: useridd,
-        user2: friendid,
-      });
+      const res = await axios.post(
+        `https://chatapp-backend-rvtt.onrender.com/api/cons/delcon`,
+        {
+          user1: useridd,
+          user2: friendid,
+        }
+      );
 
       if (res.data.status === true) {
         dispatch(DeleteCon({ user1: useridd, user2: friendid }));
-        dispatch(LogoutSecondUser())
-        dispatch(ClearPost())
+        dispatch(LogoutSecondUser());
+        dispatch(ClearPost());
       }
 
       setShoww(false);
@@ -185,25 +183,27 @@ function Home() {
 
             <div className="container2">
               <div className="chatuserstyle">
-                
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      paddingLeft: 8,
-                    }}
-                  >
-                    {dosuser?.avatar && (<img className="progimage" src={dosuser?.avatar} alt="" />)}
-                  </div>
-                  <div className="secondusernamestyle">{dosuser?.username}</div>
-                  <div className="deleteiconstyle">
-                    {dosuser?.avatar && (<RiDeleteBinLine
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    paddingLeft: 8,
+                  }}
+                >
+                  {dosuser?.avatar && (
+                    <img className="progimage" src={dosuser?.avatar} alt="" />
+                  )}
+                </div>
+                <div className="secondusernamestyle">{dosuser?.username}</div>
+                <div className="deleteiconstyle">
+                  {dosuser?.avatar && (
+                    <RiDeleteBinLine
                       className="deleteiconn"
                       onClick={() => deleteClick()}
-                    />)}
-                  </div>
-                
+                    />
+                  )}
+                </div>
               </div>
               <div className="chatcontainer">
                 {postlar &&
@@ -222,7 +222,9 @@ function Home() {
                   })}
               </div>
               <div className="sendmessagecontainer">
-                {dosuser.username && (<Chatinput too={friendid} socket={socket} />)}
+                {dosuser.username && (
+                  <Chatinput too={friendid} socket={socket} />
+                )}
               </div>
             </div>
           </div>
