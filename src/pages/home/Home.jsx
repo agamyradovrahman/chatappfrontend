@@ -97,12 +97,12 @@ function Home() {
     scrollRef.current?.scrollIntoView({});
   }, [postlar]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (!useridd) {
       console.log("does not exist user");
       navigate("/login");
     }
-  }, [navigate, useridd]);
+  }, [navigate, useridd]); */
 
   const deleteClick = async () => {
     setShoww(true);
