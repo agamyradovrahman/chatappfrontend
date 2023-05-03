@@ -45,7 +45,7 @@ export default function Login() {
   const handleClick = async (e) => {
     e.preventDefault();
 
-    /*
+    
     const { data } = await axios.post(
       "https://chatapp-backend-rvtt.onrender.com/api/auth/login/",
       {
@@ -69,18 +69,18 @@ export default function Login() {
       navigate("/home");
     } else {
       setErr(data.msg);
-    } */
+    } 
   };
 
   const handleToggle = () => {
-    /*
+    
     if (passeye === "password") {
       setPasseye("text");
       setIcon(eye);
     } else {
       setPasseye("password");
       setIcon(eyeOff);
-    } */
+    } 
   };
 
   return (
