@@ -22,7 +22,7 @@ export default function Register() {
       navigate("/home");
     }
   }, []);
-s
+
   const handleSubmit = async (e) => {
     setPrr()
     e.preventDefault();
