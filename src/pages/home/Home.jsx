@@ -34,7 +34,7 @@ function Home() {
 
   const dispatch = useDispatch();
 
-  useEffect(async () => {
+ /* useEffect(async () => {
     const dataaa = await JSON.parse(localStorage.getItem("chatapp"));
 
     if (dataaa.status) {
@@ -42,14 +42,14 @@ function Home() {
     } else {
       console.log("user is not exist");
     }
-  }, []);
+  }, []); */
 
 
   console.log(useridd);
 
-  useEffect(() => {
+/*  useEffect(() => {
     dispatch(cons(user?._id));
-  }, [dispatch, user?._id]);
+  }, [dispatch, user?._id]); 
 
   useEffect(() => {
     if (user) {
@@ -64,15 +64,16 @@ function Home() {
         dispatch(AddPost({ from: dosuser._id, too: useridd, message: msg }));
       });
     }
-  }, []);
+  }, []);  */
 
   const onChange = (con) => {
+    /*
     setFrien(con);
     setFriendid(con.users.find((element) => element !== user._id));
-    console.log(friendid);
+    console.log(friendid);  */
   };
 
-  useEffect(() => {
+ /* useEffect(() => {
     if (user?._id) {
       if (friendid) {
         dispatch(fetchPosts(useridd, friendid));
@@ -82,16 +83,8 @@ function Home() {
 
   useEffect(() => {
     dispatch(seconduser(friendid));
-  }, [friendid, dispatch]);
+  }, [friendid, dispatch]); */
 
-  /* useEffect(() => {
-    if (socket.current) {
-      socket.current.on("msg-recieve", (msg) => {
-        console.log(msg)
-        dispatch(AddPost({ from:friendid, too:useridd, message: msg }));
-      });
-    } 
-  }, [friendid,useridd, dispatch]); */
 
   useEffect(() => {
     scrollRef.current?.scrollIntoView({});

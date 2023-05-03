@@ -16,17 +16,18 @@ export default function Register() {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
+ /* useEffect(() => {
     
     if (localStorage.getItem("chatapp")) {
       navigate("/home");
     }
-  }, []);
+  }, []); */
 
   const handleSubmit = async (e) => {
     setPrr()
     e.preventDefault();
-    try {
+    
+   /* try {
       const { data } = await axios.post(
         "https://chatapp-backend-rvtt.onrender.com/api/auth/register/",
         {
@@ -45,12 +46,12 @@ export default function Register() {
 
       if(data.status === false) {
         setPrr(data)
-      }
+      }  
     } catch (error) {
       
       console.log(error.response.data)
       setErrs(error.response.data)
-    }
+    }  */
   };
 
   return (

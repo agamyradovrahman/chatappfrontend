@@ -32,7 +32,7 @@ export default function Login() {
     } 
   }, []); */
 
-  useEffect(async () => {
+ /* useEffect(async () => {
     const dataaa = await JSON.parse(localStorage.getItem("chatapp"));
 
     if (dataaa.status) {
@@ -40,10 +40,12 @@ export default function Login() {
     } else {
       console.log("user is not exist");
     }
-  }, []);
+  }, []); */
 
   const handleClick = async (e) => {
     e.preventDefault();
+
+    /*
     const { data } = await axios.post(
       "https://chatapp-backend-rvtt.onrender.com/api/auth/login/",
       {
@@ -53,7 +55,7 @@ export default function Login() {
       {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
-      }
+      } 
     );
 
     console.log(data);
@@ -67,17 +69,18 @@ export default function Login() {
       navigate("/home");
     } else {
       setErr(data.msg);
-    }
+    } */
   };
 
   const handleToggle = () => {
+    /*
     if (passeye === "password") {
       setPasseye("text");
       setIcon(eye);
     } else {
       setPasseye("password");
       setIcon(eyeOff);
-    }
+    } */
   };
 
   return (
