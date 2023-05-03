@@ -17,12 +17,12 @@ export default function Register() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const navigat = useNavigate();
+    
     if (localStorage.getItem("chatapp")) {
-      navigat("/home");
+      navigate("/home");
     }
   }, []);
-
+s
   const handleSubmit = async (e) => {
     setPrr()
     e.preventDefault();
