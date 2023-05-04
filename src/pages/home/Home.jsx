@@ -35,19 +35,24 @@ function Home() {
 
   const dispatch = useDispatch();
 
-  useEffect(async () => {
-    const dataaa = await JSON.parse(
-      localStorage.getItem("chatapp")
-    );
+  useEffect(() => {
+    const loadfunction = async () => {
+      const dataaa = await JSON.parse(
+        localStorage.getItem("chatapp")
+      );
+  
+      if(dataaa){
+        dispatch(LoginUser(dataaa))
+        setAuthh(true)
+      } else {
+        console.log("user is not exist");
+        setAuthh(false)
+        navigate("/login")
+      } 
+    }
 
-    if(dataaa){
-      dispatch(LoginUser(dataaa))
-      setAuthh(true)
-    } else {
-      console.log("user is not exist");
-      setAuthh(false)
-      navigate("/login")
-    } 
+    loadfunction()
+    
   }, []);
 
 
