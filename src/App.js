@@ -23,7 +23,7 @@ function App() {
       console.log("user is not exist");
       setAuthh(false)
     } 
-  }, []);
+  }, [setAuthh]);
 
   return (
 
