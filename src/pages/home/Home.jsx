@@ -46,6 +46,7 @@ function Home() {
     } else {
       console.log("user is not exist");
       setAuthh(false)
+      navigate("/login")
     } 
   }, []);
 
@@ -56,12 +57,6 @@ function Home() {
     dispatch(cons(user?._id));
   }, [dispatch, user?._id]); 
 
-
-  useEffect(() => {
-    if (!authh) {
-      navigate("/login")
-    }
-  }, [setAuthh, authh,navigate]); 
 
   useEffect(() => {
     if (user) {
