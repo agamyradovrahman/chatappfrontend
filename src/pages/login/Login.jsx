@@ -67,7 +67,6 @@ export default function Login() {
       setPassword("");
       setUsername("");
 
-      navigate("/home");
     } else {
       setErr(data.msg);
     } 
