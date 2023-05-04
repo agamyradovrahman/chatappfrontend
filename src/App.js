@@ -29,9 +29,9 @@ function App() {
 
     <BrowserRouter >
       <Routes>
-        <Route path="/" element={authh ? <Home /> : <Login />} />
         <Route path="/register" element={ <Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Home />} />
         <Route path="*" element={<div>Error 404 Page not found</div>} />
       </Routes>
     </BrowserRouter>

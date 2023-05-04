@@ -17,6 +17,7 @@ import { LoginUser, LogoutSecondUser } from "../../actions/userauth";
 
 function Home() {
   const [showw, setShoww] = useState(false);
+  const [authh, setAuthh] = useState();
   const navigate = useNavigate();
 
   const scrollRef = useRef();
@@ -34,22 +35,33 @@ function Home() {
 
   const dispatch = useDispatch();
 
- /* useEffect(async () => {
-    const dataaa = await JSON.parse(localStorage.getItem("chatapp"));
+  useEffect(async () => {
+    const dataaa = await JSON.parse(
+      localStorage.getItem("chatapp")
+    );
 
-    if (dataaa.status) {
-      dispatch(LoginUser(dataaa));
+    if(dataaa){
+      dispatch(LoginUser(dataaa))
+      setAuthh(true)
     } else {
       console.log("user is not exist");
-    }
-  }, []); */
+      setAuthh(false)
+    } 
+  }, []);
 
 
   console.log(useridd);
 
-/*  useEffect(() => {
+  useEffect(() => {
     dispatch(cons(user?._id));
   }, [dispatch, user?._id]); 
+
+
+  useEffect(() => {
+    if (!authh) {
+      navigate("/login")
+    }
+  }, [setAuthh, authh,navigate]); 
 
   useEffect(() => {
     if (user) {
@@ -64,16 +76,16 @@ function Home() {
         dispatch(AddPost({ from: dosuser._id, too: useridd, message: msg }));
       });
     }
-  }, []);  */
+  }, []);  
 
   const onChange = (con) => {
-    /*
+    
     setFrien(con);
     setFriendid(con.users.find((element) => element !== user._id));
-    console.log(friendid);  */
+    console.log(friendid);  
   };
 
- /* useEffect(() => {
+  useEffect(() => {
     if (user?._id) {
       if (friendid) {
         dispatch(fetchPosts(useridd, friendid));
@@ -83,7 +95,7 @@ function Home() {
 
   useEffect(() => {
     dispatch(seconduser(friendid));
-  }, [friendid, dispatch]); */
+  }, [friendid, dispatch]); 
 
 
   useEffect(() => {
