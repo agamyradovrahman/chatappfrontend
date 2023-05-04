@@ -2,11 +2,13 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Register from "./pages/Register/Register";
 import Login from "./pages/login/Login";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { LoginUser } from "./actions/userauth";
 
 
 function App() {
   const [authh, setAuthh] = useState(false)
+  const dispatch = useDispatch();
 
   useEffect(async () => {
     const dataaa = await JSON.parse(
@@ -18,6 +20,7 @@ function App() {
       setAuthh(true)
     } else {
       console.log("user is not exist");
+      setAuthh(false)
     } 
   }, []);
 
