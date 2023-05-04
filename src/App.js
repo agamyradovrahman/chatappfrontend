@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 
 
 function App() {
-  const [authh, setAuthh] = useState(false)
+  const [authh, setAuthh] = useState()
   const dispatch = useDispatch();
 
   useEffect(async () => {
