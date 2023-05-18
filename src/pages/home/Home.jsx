@@ -73,6 +73,7 @@ function Home() {
   useEffect(() => {
     if (socket.current) {
       socket.current.on("msg-recieve", (msg) => {
+        console.log(msg)
         dispatch(AddPost({ from: dosuser._id, too: useridd, message: msg }));
       });
     }
