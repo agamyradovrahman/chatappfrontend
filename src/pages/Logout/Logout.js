@@ -122,17 +122,17 @@ const Logout = ({ showw }) => {
       
       console.log(res.data.url);
 
-      /*
+      
       const red = await axios.put(
         `http://localhost:5000/api/auth/user/uploadavatar`,
-        { userid, url: urll }
+        { userid, url: res.data.url } 
       );
 
       console.log(red);
 
-      if (red.data.status) {
+      if (red.data.status) { 
         dispatch(Renameuser(red.data.user));
-      }  */
+      }  
     } catch (error) {
       console.log(error);
     }
