@@ -94,7 +94,9 @@ function Home() {
   }, [useridd, friendid, dispatch, frien, user?._id]);
 
   useEffect(() => {
-    dispatch(seconduser(friendid));
+    if (friendid) {
+      dispatch(seconduser(friendid)); 
+    }
   }, [friendid, dispatch]); 
 
 
