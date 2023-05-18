@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiSend } from "react-icons/fi";
 import "./Chatinput.css";
 import axios from "axios";
@@ -9,6 +9,9 @@ const Chatinput = ({ too, socket }) => {
   const dispatch = useDispatch();
   const [message, setMessage] = useState("");
   const from = useSelector((state) => state.user.user._id);
+  const dosuser = useSelector((state) => state.seconduser?.friend);
+
+  const useridd = useSelector((state) => state.user?.user?._id);
 
   const handleClick = async () => {
     console.log(from);
