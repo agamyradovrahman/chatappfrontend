@@ -69,15 +69,7 @@ function Home() {
       socket.current.emit("add-user", user?._id);
     }
   }, [user]);
-
-  useEffect(() => {
-    if (socket.current) {
-      socket.current.on("msg-recieve", (msg) => {
-        console.log(msg)
-        dispatch(AddPost({ from: dosuser._id, too: useridd, message: msg }));
-      });
-    }
-  }, []);  
+ 
 
   const onChange = (con) => {
     
@@ -99,6 +91,16 @@ function Home() {
       dispatch(seconduser(friendid)); 
     }
   }, [friendid, dispatch]); 
+
+
+  useEffect(() => {
+    if (socket.current) {
+      socket.current.on("msg-recieve", (msg) => {
+        console.log(msg)
+        dispatch(AddPost({ from: dosuser._id, too: useridd, message: msg }));
+      });
+    }
+  }, []); 
 
 
   useEffect(() => {
