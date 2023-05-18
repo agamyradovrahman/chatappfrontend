@@ -26,7 +26,7 @@ function Home() {
   const [friendid, setFriendid] = useState("");
   const postlar = useSelector((state) => state.posts?.posts);
 
-  const user = useSelector((state) => state.user?.user);
+  const user = useSelector((state) => state?.user?.user);
   const conslar = useSelector((state) => state.con?.posts);
 
   const dosuser = useSelector((state) => state.seconduser?.friend);
@@ -59,8 +59,8 @@ function Home() {
   console.log(useridd);
 
   useEffect(() => {
-    dispatch(cons(user?._id));
-  }, [dispatch, user?._id]); 
+    dispatch(cons(user._id));
+  }, [dispatch, user._id]); 
 
 
   useEffect(() => {
@@ -69,7 +69,15 @@ function Home() {
       socket.current.emit("add-user", user?._id);
     }
   }, [user]);
- 
+
+  /* useEffect(() => {
+    if (socket.current) {
+      socket.current.on("msg-recieve", (msg) => {
+        console.log(msg)
+        dispatch(AddPost({ from: dosuser._id, too: useridd, message: msg }));
+      });
+    }
+  }, []);  */
 
   const onChange = (con) => {
     
@@ -91,16 +99,6 @@ function Home() {
       dispatch(seconduser(friendid)); 
     }
   }, [friendid, dispatch]); 
-
-
-  useEffect(() => {
-    if (socket.current) {
-      socket.current.on("msg-recieve", (msg) => {
-        console.log(msg)
-        dispatch(AddPost({ from: dosuser._id, too: useridd, message: msg }));
-      });
-    }
-  }, []); 
 
 
   useEffect(() => {
