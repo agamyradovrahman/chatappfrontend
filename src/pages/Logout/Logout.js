@@ -124,7 +124,7 @@ const Logout = ({ showw }) => {
 
       
       const red = await axios.put(
-        `http://localhost:5000/api/auth/user/uploadavatar`,
+        `https://chatapp-backend-rvtt.onrender.com/api/auth/user/uploadavatar`,
         { userid, url: res.data.url } 
       );
 
