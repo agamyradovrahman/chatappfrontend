@@ -77,7 +77,7 @@ function Home() {
         dispatch(AddPost({ from: dosuser._id, too: useridd, message: msg }));
       });
     }
-  }, [socket.current.on]);  
+  }, []);  
 
   const onChange = (con) => {
     
