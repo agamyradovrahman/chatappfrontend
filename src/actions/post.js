@@ -10,7 +10,6 @@ export const fetchPosts = (useridd,friendid) => async (dispatch) =>{
             headers: { "Content-Type": "application/json" },
             withCredentials: true,
           });
-        console.log(data)
         
 
         dispatch({
@@ -29,7 +28,6 @@ export const AddPost = ({from, too, message}) => async (dispatch) => {
             type: types.ADD_POSTS,
             payload: {message: message, sender: from, to: too, users: [from,too]}
         })
-        console.log({from, too, message})
     } catch (error) {
         console.log(error)
     }

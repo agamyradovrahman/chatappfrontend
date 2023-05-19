@@ -30,7 +30,6 @@ const AddFriend = () => {
         }
       );
 
-      console.log(data)
 
       if (data.data.status=== true) {
         const res = await axios.get(`https://chatapp-backend-rvtt.onrender.com/api/auth/singleuser/${user2}`)

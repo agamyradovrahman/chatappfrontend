@@ -59,7 +59,6 @@ export default function Login() {
       } 
     );
 
-    console.log(data);
 
     if (data.status === true) {
       localStorage.setItem("chatapp", JSON.stringify(data));

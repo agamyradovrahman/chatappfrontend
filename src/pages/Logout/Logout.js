@@ -61,7 +61,6 @@ const Logout = ({ showw }) => {
       dispatch(LogoutSecondUser())
 
       navigate("/login");
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -75,10 +74,8 @@ const Logout = ({ showw }) => {
   const profileClick = () => {
     if (sidebar === true) {
       setSidebar(false);
-      console.log("false");
     } else {
       setSidebar(true);
-      console.log("true");
     }
   };
 
@@ -93,7 +90,6 @@ const Logout = ({ showw }) => {
 
   const handleClick1 = async () => {
     await hiddenFileInput.current.click();
-    console.log(image)
   };
 
 
@@ -102,7 +98,6 @@ const Logout = ({ showw }) => {
       
       const formData = new FormData();
       formData.append("image", image);
-      console.log(formData)
 
       const res = await axios({
         // Endpoint to send files
@@ -113,22 +108,12 @@ const Logout = ({ showw }) => {
         },
         data: formData, 
       }) 
- 
-
-      const urll = res.data.url;
-      console.log(res); 
-
-      
-      
-      console.log(res.data.url);
 
       
       const red = await axios.put(
         `https://chatapp-backend-rvtt.onrender.com/api/auth/user/uploadavatar`,
         { userid, url: res.data.url } 
       );
-
-      console.log(red);
 
       if (red.data.status) { 
         dispatch(Renameuser(red.data.user));

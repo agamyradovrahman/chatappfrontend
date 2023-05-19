@@ -21,21 +21,18 @@ export const AddCon = ({user1, user2}) => async (dispatch) => {
             type: types.ADD_CON,
             payload: { users: [user1,user2]}
         })
-        console.log({user1 ,user2})
     } catch (error) {
         console.log(error)
     }
 }
 
 export const DeleteCon = ({user1, user2}) => async (dispatch) => {
-    console.log([user1, user2])
     try {
         dispatch({
             type: types.DELETE_CON,
             payload: [user1, user2]
         })
-        console.log({user1 ,user2})
     } catch (error) {
         console.log(error) 
     }
-} 
+}  

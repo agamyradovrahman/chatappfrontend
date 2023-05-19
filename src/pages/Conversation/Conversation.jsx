@@ -22,7 +22,6 @@ export default function Conversation({ con, user, friend }) {
         );
         setUserr(res.data.user);
 
-        console.log(res.data.user);
       } catch (err) {
         console.log(err);
       }
@@ -33,8 +32,6 @@ export default function Conversation({ con, user, friend }) {
 
   const yesClick = async () => {
     try {
-      console.log(useridd);
-      console.log(seconduserid);
       const res = await axios.post(`https://chatapp-backend-rvtt.onrender.com/api/cons/delcon`, {
         user1: useridd,
         user2: seconduserid,
@@ -46,7 +43,6 @@ export default function Conversation({ con, user, friend }) {
 
       setShow(false);
 
-      console.log(res);
     } catch (error) {
       console.log(error);
     }

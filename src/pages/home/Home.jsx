@@ -56,8 +56,6 @@ function Home() {
   }, []);
 
 
-  console.log(useridd);
-
   useEffect(() => {
     dispatch(cons(user._id));
   }, [dispatch, user._id]); 
@@ -83,7 +81,6 @@ function Home() {
     
     setFrien(con);
     setFriendid(con.users.find((element) => element !== user._id));
-    console.log(friendid);  
   };
 
   useEffect(() => {
@@ -118,8 +115,6 @@ function Home() {
 
   const yesClick = async () => {
     try {
-      console.log(useridd);
-      console.log(friendid);
       const res = await axios.post(
         `https://chatapp-backend-rvtt.onrender.com/api/cons/delcon`,
         {
@@ -136,7 +131,6 @@ function Home() {
 
       setShoww(false);
 
-      console.log(res);
     } catch (error) {
       console.log(error);
     }

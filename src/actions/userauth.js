@@ -15,10 +15,8 @@ export const RegisterUser = ({data}) => async (dispatch) => {
 export const LoginUser = (data) => async (dispatch) => {
 
   try {
-    
 
     dispatch({ type: types.LOGIN_USER_SUCCESS, payload: data });
-    console.log(data.user);
   } catch (error) {
     console.log(error);
   }
@@ -30,7 +28,6 @@ export const Renameuser = (data) => async (dispatch) => {
     
 
     dispatch({ type: types.RENAME_USER, payload: data });
-    console.log(data.user);
   } catch (error) {
     console.log(error);
   }

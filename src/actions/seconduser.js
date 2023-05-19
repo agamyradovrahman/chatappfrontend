@@ -11,7 +11,6 @@ export const seconduser = (friendid) => async (dispatch) => {
       type: types.FETCHH_SECONDUSER,
       payload: res.data.user,
     });
-    console.log(res.data.user);
   } catch (error) {
     console.log(error);
   }

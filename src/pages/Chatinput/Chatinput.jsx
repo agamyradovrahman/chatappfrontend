@@ -14,8 +14,6 @@ const Chatinput = ({ too, socket }) => {
   const useridd = useSelector((state) => state.user?.user?._id);
 
   const handleClick = async () => {
-    console.log(from);
-    console.log(too);
     try {
       const data = await axios.post(
         "https://chatapp-backend-rvtt.onrender.com/api/msg/addmsgs/",
@@ -29,7 +27,6 @@ const Chatinput = ({ too, socket }) => {
           withCredentials: true,
         }
       );
-      console.log(data)
       socket.current.emit("send-msg", {
         to: too,
         from: from,
@@ -45,7 +42,6 @@ const Chatinput = ({ too, socket }) => {
   useEffect(() => {
     if (socket.current) {
       socket.current.on("msg-recieve", (msg) => {
-        console.log(msg)
         dispatch(AddPost({ from: dosuser._id, too: useridd, message: msg }));
       });
     }

@@ -27,7 +27,7 @@ export default function Register() {
     setPrr()
     e.preventDefault();
     
-   /* try {
+    try {
       const { data } = await axios.post(
         "https://chatapp-backend-rvtt.onrender.com/api/auth/register/",
         {
@@ -51,7 +51,7 @@ export default function Register() {
       
       console.log(error.response.data)
       setErrs(error.response.data)
-    }  */
+    }  
   };
 
   return (
