@@ -61,6 +61,7 @@ const Logout = ({ showw }) => {
       dispatch(LogoutSecondUser())
 
       navigate("/login");
+      localStorage.removeItem('chatapp');
     } catch (error) {
       console.log(error);
     }
